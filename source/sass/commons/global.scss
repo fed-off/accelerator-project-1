@@ -1,0 +1,35 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-width: $mobile-width;
+  min-height: 100%;
+  margin: 0;
+
+  font-family: $main-font;
+  font-size: 14px;
+  font-weight: $light-weight;
+  line-height: 22px;
+  color: $primary-color;
+  background-color: $white;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}

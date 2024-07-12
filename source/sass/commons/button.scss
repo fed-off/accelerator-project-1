@@ -1,0 +1,17 @@
+.button {
+  padding: 22px;
+  font-family: $main-font;
+  font-size: 12px;
+  font-weight: $bold-weight;
+  line-height: 12px;
+  color: $primary-color;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-color: transparent;
+  border: 2px solid $primary-color;
+
+  &--light {
+    color: $white;
+    border-color: $white;
+  }
+}

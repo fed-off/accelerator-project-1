@@ -1,4 +1,37 @@
 // Vendor
-// ---------------------------------
-
 @import "vendor/normalize";
+
+// Global
+@import "commons/variables";
+@import "commons/fonts";
+@import "commons/global";
+@import "commons/visually-hidden";
+@import "commons/container";
+@import "commons/main-content";
+@import "commons/logo";
+@import "commons/button";
+@import "commons/slider-button";
+@import "commons/accordion";
+
+// Blocks
+@import "blocks/hero";
+@import "blocks/about";
+@import "blocks/price";
+@import "blocks/price-card";
+@import "blocks/event";
+@import "blocks/event-card";
+@import "blocks/juri";
+@import "blocks/juri-card";
+@import "blocks/features";
+@import "blocks/feature-card";
+@import "blocks/offers";
+@import "blocks/offer-card";
+@import "blocks/faq";
+@import "blocks/reviews";
+@import "blocks/review-card";
+@import "blocks/contact";
+@import "blocks/form";
+@import "blocks/contacts";
+@import "blocks/footer";
+@import "blocks/nav";
+@import "blocks/socials";
