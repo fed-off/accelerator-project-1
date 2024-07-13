@@ -19,7 +19,11 @@
       <article class="hero" data-test="hero">
         <div class="hero__container container">
           <header class="hero__header">
-            <img class="hero__logo logo" src="#" width="100" height="20" alt="Supergym">
+            <picture>
+              <source media="(min-width: 1366)" srcset="img/logo.svg" width="130" height="26" type="image/svg+xml">
+              <source media="(min-width: 768px)" srcset="img/logo.svg" width="110" height="22" type="image/svg+xml">
+              <img class="hero__logo logo" src="img/logo.svg" width="100" height="20" alt="Supergym">
+            </picture>
             <a class="hero__phone" href="tel:+78005555555">8 800 555-55-55</a>
           </header>
           <div class="hero__content">
@@ -44,9 +48,23 @@
             <p class="about__sub-title">Просторный зал площадью 900 кв/м</p>
           </hgroup>
           <p>Supergym – самый большой фитнес центр за Уралом и идеальное место для укрепления тела и здоровья. Тренажёрный зал оснащён всем необходимым современным оборудованием для всех спортсменов.</p>
-          <img class="about__image" src="#" width="320" height="280" alt="Тренажёрный зал, оборудованный современным инвентарём">
+          <picture>
+            <source type="image/webp" media="(min-width: 1366px)" srcset="img/gym-desktop@1x.webp, img/gym-desktop@2x.webp 2x" width="660" height="400">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/gym-tablet@1x.webp, img/gym-tablet@2x.webp 2x" width="678" height="345">
+            <source type="image/webp" srcset="img/gym-mobile@1x.webp, img/gym-mobile@2x.webp 2x" width="320" height="280">
+            <source type="image/jpg" media="(min-width: 1366px)" srcset="img/gym-desktop@1x.jpg, img/gym-desktop@2x.jpg 2x" width="660" height="400">
+            <source type="image/jpg" media="(min-width: 768px)" srcset="img/gym-tablet@1x.jpg, img/gym-tablet@2x.jpg 2x" width="678" height="345">
+            <img class="about__image" src="img/gym-mobile@1x.jpg" srcset="img/gym-mobile@2x.jpg 2x" width="320" height="280" alt="Тренажёрный зал, оборудованный современным инвентарём">
+          </picture>
           <div class="about__video-preview">
-            <img class="about__preview-image" src="#" width="320" height="170" alt="Обложка видео о тренажёрном зале">
+            <picture>
+              <source type="image/webp" media="(min-width: 1366px)" srcset="img/video-desktop@1x.webp, img/video-desktop@2x.webp 2x" width="360" height="230">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/video-tablet@1x.webp, img/video-tablet@2x.webp 2x" width="270" height="170">
+              <source type="image/webp" srcset="img/video-mobile@1x.webp, img/video-mobile@2x.webp 2x" width="320" height="170">
+              <source type="image/jpg" media="(min-width: 1366px)" srcset="img/video-desktop@1x.jpg, img/video-desktop@2x.jpg 2x" width="360" height="230">
+              <source type="image/jpg" media="(min-width: 768px)" srcset="img/video-tablet@1x.jpg, img/video-tablet@2x.jpg 2x" width="270" height="170">
+              <img class="about__preview-image" src="img/video-mobile@1x.jpg" srcset="img/video-mobile@2x.jpg 2x" width="320" height="170" alt="Обложка видео о тренажёрном зале">
+            </picture>
             <button class="about__play-button" type="button">
               <span class="visually-hidden">Смотреть видео</span>
             </button>
@@ -142,7 +160,6 @@
             </div>
             <p class="event-card__description">Ежегодные соревнования по CrossFit</p>
             <a class="event-card__button button" href="#">Заполнить заявку</a>
-            <img class="event-card__image" src="#" width="290" height="290" alt="Спортсмен на соревновании по CrossFit">
           </article>
         </div>
       </section>
@@ -157,7 +174,10 @@
             <li class="juri__item">
               <article class="juri__juri-card juri-card">
                 <figure class="juri-card__preview">
-                  <img class="juri-card__image" src="#" width="260" height="300" alt="Член жюри">
+                  <picture>
+                    <source type="image/webp" srcset="img/anna@1x.webp, img/anna@2x.webp 2x" width="260" height="300">
+                    <img class="juri-card__image" src="img/anna@1x.jpg" srcset="img/anna@2x.jpg 2x" width="260" height="300" alt="Член жюри">
+                  </picture>
                   <figcaption class="juri-card__title">
                     <h3>Анна Павлова</h3>
                   </figcaption>
@@ -175,7 +195,10 @@
             <li class="juri__item">
               <article class="juri__juri-card juri-card">
                 <figure class="juri-card__preview">
-                  <img class="juri-card__image" src="#" width="260" height="300" alt="Член жюри">
+                  <picture>
+                    <source type="image/webp" srcset="img/aleksei@1x.webp, img/aleksei@2x.webp 2x" width="260" height="300">
+                    <img class="juri-card__image" src="img/aleksei@1x.jpg" srcset="img/aleksei@2x.jpg 2x" width="260" height="300" alt="Член жюри">
+                  </picture>
                   <figcaption class="juri-card__title">
                     <h3>Алексей Лавров</h3>
                   </figcaption>
@@ -193,7 +216,10 @@
             <li class="juri__item">
               <article class="juri__juri-card juri-card">
                 <figure class="juri-card__preview">
-                  <img class="juri-card__image" src="#" width="260" height="300" alt="Член жюри">
+                  <picture>
+                    <source type="image/webp" srcset="img/aleksandr@1x.webp, img/aleksandr@2x.webp 2x" width="260" height="300">
+                    <img class="juri-card__image" src="img/aleksandr@1x.jpg" srcset="img/aleksandr@2x.jpg 2x" width="260" height="300" alt="Член жюри">
+                  </picture>
                   <figcaption class="juri-card__title">
                     <h3>Александр Пашков</h3>
                   </figcaption>
@@ -211,7 +237,10 @@
             <li class="juri__item">
               <article class="juri__juri-card juri-card">
                 <figure class="juri-card__preview">
-                  <img class="juri-card__image" src="#" width="260" height="300" alt="Член жюри">
+                  <picture>
+                    <source type="image/webp" srcset="img/mary@1x.webp, img/mary@2x.webp 2x" width="260" height="300">
+                    <img class="juri-card__image" src="img/mary@1x.jpg" srcset="img/mary@2x.jpg 2x" width="260" height="300" alt="Член жюри">
+                  </picture>
                   <figcaption class="juri-card__title">
                     <h3>Мария Кетова</h3>
                   </figcaption>
@@ -229,7 +258,10 @@
             <li class="juri__item">
               <article class="juri__juri-card juri-card">
                 <figure class="juri-card__preview">
-                  <img class="juri-card__image" src="#" width="260" height="300" alt="Член жюри">
+                  <picture>
+                    <source type="image/webp" srcset="img/aleksandr@1x.webp, img/aleksandr@2x.webp 2x" width="260" height="300">
+                    <img class="juri-card__image" src="img/aleksandr@1x.jpg" srcset="img/aleksandr@2x.jpg 2x" width="260" height="300" alt="Член жюри">
+                  </picture>
                   <figcaption class="juri-card__title">
                     <h3>Алексей Алексеев</h3>
                   </figcaption>
@@ -247,9 +279,12 @@
             <li class="juri__item">
               <article class="juri__juri-card juri-card">
                 <figure class="juri-card__preview">
-                  <img class="juri-card__image" src="#" width="260" height="300" alt="Член жюри">
+                  <picture>
+                    <source type="image/webp" srcset="img/aleksandr@1x.webp, img/aleksandr@2x.webp 2x" width="260" height="300">
+                    <img class="juri-card__image" src="img/aleksandr@1x.jpg" srcset="img/aleksandr@2x.jpg 2x" width="260" height="300" alt="Член жюри">
+                  </picture>
                   <figcaption class="juri-card__title">
-                    <h3>Петр Петров</h3>
+                    <h3>Петр Алексеев</h3>
                   </figcaption>
                 </figure>
                 <div class="juri-card__info">
@@ -265,7 +300,10 @@
             <li class="juri__item">
               <article class="juri__juri-card juri-card">
                 <figure class="juri-card__preview">
-                  <img class="juri-card__image" src="#" width="260" height="300" alt="Член жюри">
+                  <picture>
+                    <source type="image/webp" srcset="img/anna@1x.webp, img/anna@2x.webp 2x" width="260" height="300">
+                    <img class="juri-card__image" src="img/anna@1x.jpg" srcset="img/anna@2x.jpg 2x" width="260" height="300" alt="Член жюри">
+                  </picture>
                   <figcaption class="juri-card__title">
                     <h3>Александра Александрова</h3>
                   </figcaption>
@@ -283,7 +321,10 @@
             <li class="juri__item">
               <article class="juri__juri-card juri-card">
                 <figure class="juri-card__preview">
-                  <img class="juri-card__image" src="#" width="260" height="300" alt="Член жюри">
+                  <picture>
+                    <source type="image/webp" srcset="img/aleksei@1x.webp, img/aleksei@2x.webp 2x" width="260" height="300">
+                    <img class="juri-card__image" src="img/aleksei@1x.jpg" srcset="img/aleksei@2x.jpg 2x" width="260" height="300" alt="Член жюри">
+                  </picture>
                   <figcaption class="juri-card__title">
                     <h3>Иван Иванов</h3>
                   </figcaption>
@@ -375,7 +416,6 @@
                 </h3>
                 <p>Безлимитный абонемент в тренажёрный зал</p>
                 <a class="offer-card__link" href="#">Подробнее</a>
-                <img class="offer-card__image" src="#" width="320" height="360" alt="Спортивная девушка - счастливый обладатель годового абонемента в наш спортзал">
               </article>
             </li>
             <li class="offers__item">
@@ -637,7 +677,12 @@
           <ul class="reviews__list">
             <li class="reviews__item">
               <article class="reviews__review-card review-card">
-                <img src="#" width="68" height="68" alt="Аватар пользователя">
+                <picture>
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/avatar-tablet@1x.webp, img/avatar-tablet@2x.webp 2x" width="80" height="80">
+                  <source type="image/webp" srcset="img/avatar-mobile@1x.webp, img/avatar-mobile@2x.webp 2x" width="68" height="68">
+                  <source type="image/jpg" media="(min-width: 768px)" srcset="img/avatar-tablet@1x.jpg, img/avatar-tablet@2x.jpg 2x" width="80" height="80">
+                  <img src="img/avatar-mobile@1x.jpg" srcset="img/avatar-mobile@2x.jpg 2x" width="68" height="68" alt="Аватар пользователя">
+                </picture>
                 <div class="review-card__content-wrapper">
                   <h3>Анна Орлова</h3>
                   <blockquote>"Хожу в Supergym уже больше года. Нравится, что в клубе всегда чисто, тренажёры обновляют, персонал дружелюбный. Зал просторный, даже в вечернее время нет очередей"</blockquote>
@@ -646,7 +691,12 @@
             </li>
             <li class="reviews__item">
               <article class="reviews__review-card review-card">
-                <img src="#" width="68" height="68" alt="Аватар пользователя">
+                <picture>
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/avatar-tablet@1x.webp, img/avatar-tablet@2x.webp 2x" width="80" height="80">
+                  <source type="image/webp" srcset="img/avatar-mobile@1x.webp, img/avatar-mobile@2x.webp 2x" width="68" height="68">
+                  <source type="image/jpg" media="(min-width: 768px)" srcset="img/avatar-tablet@1x.jpg, img/avatar-tablet@2x.jpg 2x" width="80" height="80">
+                  <img src="img/avatar-mobile@1x.jpg" srcset="img/avatar-mobile@2x.jpg 2x" width="68" height="68" alt="Аватар пользователя">
+                </picture>
                 <div class="review-card__content-wrapper">
                   <h3>Кекс Академик</h3>
                   <blockquote>"Хожу в Supergym уже год. В клубе всегда чисто, тренажёры обновляют, люди дружелюбные. Зал просторный, даже в вечернее время нет очередей"</blockquote>
@@ -708,7 +758,11 @@
 
     <footer class="footer" data-test="footer">
       <div class="footer__container container">
-        <img class="footer__logo logo" src="#" width="100" height="20" alt="Supergym">
+        <picture>
+          <source media="(min-width: 1366)" srcset="img/logo.svg" width="130" height="26" type="image/svg+xml">
+          <source media="(min-width: 768px)" srcset="img/logo.svg" width="110" height="22" type="image/svg+xml">
+          <img class="footer__logo logo" src="img/logo.svg" width="100" height="20" alt="Supergym">
+        </picture>
         <nav class="footer__nav nav">
           <ul class="nav__list">
             <li class="nav__item">
