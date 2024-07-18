@@ -1,10 +1,7 @@
 .hero {
   color: $white;
-  background: linear-gradient(90deg, #1c3477 0%, #1c3477 0.01%, #1a3578 39.11%, #73184b 75.5%, #b4022a 100%);
-}
-
-.hero__container {
   padding-bottom: 32px;
+  background: linear-gradient(90deg, #1c3477 0%, #1c3477 0.01%, #1a3578 39.11%, #73184b 75.5%, #b4022a 100%);
 
   @media (min-width: $tablet-width) {
     padding-bottom: 100px;
@@ -32,10 +29,6 @@
   @media (min-width: $desktop-width) {
     margin-bottom: 30px;
   }
-}
-
-.hero__logo-wrapper {
-  flex-shrink: 0;
 }
 
 .hero__phone {
