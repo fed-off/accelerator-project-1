@@ -92,7 +92,7 @@
       </section>
 
       <section class="price" id="price" data-test="price">
-        <div class="price__container container">
+        <div class="container">
           <h2 class="price__title">Абонементы</h2>
           <ul class="price__variants">
             <li class="price__variant">
@@ -119,10 +119,15 @@
               <article class="price__price-card price-card">
                 <h3 class="price-card__title">С тренером</h3>
                 <p class="price-card__description">12 занятий</p>
+                <p class="price-card__price price-card__price--1" data-price="5000">
+                  <span class="price-card__price-value">5000</span>
+                  <span class="visually-hidden">рублей</span>
+                </p>
                 <p class="price-card__price">
-                  <span class="price-card__price-value price-card__price-value--1">5000</span>
-                  <span class="price-card__price-value price-card__price-value--6">30000</span>
-                  <span class="price-card__price-value price-card__price-value--12">60000</span>
+                  <span class="price-card__price-value price-card__price-value--6" data-price="30000">30000</span>
+                </p>
+                <p class="price-card__price">
+                  <span class="price-card__price-value price-card__price-value--12" data-price="60000">60000</span>
                 </p>
                 <a class="price-card__button button" href="#">Купить абонемент</a>
               </article>

@@ -1,0 +1,118 @@
+.price {
+  padding: 41px 0;
+  background-color: $primary-bg;
+}
+
+.price__title {
+  margin: 0;
+  margin-bottom: 31px;
+
+  font-family: $secondary-font;
+  font-size: 32px;
+  font-weight: $semi-bold-weight;
+  line-height: 32px;
+  text-align: center;
+}
+
+// Блок с таким выравниванием очень плохо переживает переполнение с переносом на новую строку. Лечится гридами, но для этого необходимо обсудить выравнивание с дизайнером, есть несколько предложений.
+.price__variants {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 10px;
+
+  margin: 0;
+  margin-bottom: 30px;
+  padding: 0;
+  list-style: none;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 2px;
+    background-color: rgba(120, 120, 120, 0.2);
+  }
+}
+
+.price__tab {
+  position: relative;
+  display: block;
+  width: fit-content;
+  min-height: 24px;
+  height: 100%;
+  padding-bottom: 8px;
+  user-select: none;
+  cursor: pointer;
+
+  font-size: 16px;
+  font-weight: $regular-weight;
+  line-height: 16px;
+  color: $light;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+  }
+
+  &:has(input:disabled) {
+    color: $primary-color;
+    opacity: 0.3;
+    cursor: default;
+
+    &::before {
+      background-color: $primary-color;
+    }
+  }
+
+  &:has(.price__tab-radio:checked):not(:hover) {
+    color: $primary-color;
+
+    &::before {
+      background-color: #d10a42;
+    }
+  }
+
+  &:focus-visible {
+    color: $primary-color;
+
+    &::before {
+      background-color: $primary-color;
+    }
+  }
+
+  &:hover {
+    color: rgba(16, 38, 84, 0.7);
+
+    &::before {
+      background-color: #787878;
+    }
+  }
+
+  &:active {
+    color: $primary-color;
+
+    &::before {
+      background-color: $accent-bg;
+    }
+  }
+}
+
+
+.price__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 35px;
+
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
