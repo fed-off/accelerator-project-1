@@ -3,3 +3,4 @@
 // import {Navigation, Pagination} from "swiper/modules";
 // import 'swiper/css';
 import './play-video.js';
+import './connect-tabs.js';

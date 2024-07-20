@@ -98,19 +98,19 @@
             <li class="price__variant">
               <label class="price__tab">
                 <span class="price__tab-text">1 месяц</span>
-                <input class="price__tab-radio visually-hidden" type="radio" name="price" value="1" checked>
+                <input class="price__tab-radio visually-hidden" type="radio" name="price" value="1" checked data-tab="price-card__price">
               </label>
             </li>
             <li class="price__variant">
               <label class="price__tab">
                 <span class="price__tab-text">6 месяцев</span>
-                <input class="price__tab-radio visually-hidden" type="radio" name="price" value="6">
+                <input class="price__tab-radio visually-hidden" type="radio" name="price" value="6" data-tab="price-card__price">
               </label>
             </li>
             <li class="price__variant">
               <label class="price__tab">
                 <span class="price__tab-text">12 месяцев</span>
-                <input class="price__tab-radio visually-hidden" type="radio" name="price" value="12">
+                <input class="price__tab-radio visually-hidden" type="radio" name="price" value="12" data-tab="price-card__price">
               </label>
             </li>
           </ul>
@@ -119,39 +119,55 @@
               <article class="price__price-card price-card">
                 <h3 class="price-card__title">С тренером</h3>
                 <p class="price-card__description">12 занятий</p>
-                <p class="price-card__price price-card__price--1" data-price="5000">
+                <p class="price-card__price price-card__price--1 price-card__price--current" data-price="5000">
                   <span class="price-card__price-value">5000</span>
                   <span class="visually-hidden">рублей</span>
                 </p>
-                <p class="price-card__price">
-                  <span class="price-card__price-value price-card__price-value--6" data-price="30000">30000</span>
+                <p class="price-card__price price-card__price--6" data-price="30000">
+                  <span class="price-card__price-value">30000</span>
+                  <span class="visually-hidden">рублей</span>
                 </p>
-                <p class="price-card__price">
-                  <span class="price-card__price-value price-card__price-value--12" data-price="60000">60000</span>
+                <p class="price-card__price price-card__price--12" data-price="60000">
+                  <span class="price-card__price-value">60000</span>
+                  <span class="visually-hidden">рублей</span>
                 </p>
                 <a class="price-card__button button" href="#">Купить абонемент</a>
               </article>
             </li>
-            <li class="price__card">
+            <li class="price__item">
               <article class="price__price-card price-card">
                 <h3 class="price-card__title">Дневной</h3>
                 <p class="price-card__description">С <time datetime="08:00">8:00</time> до <time datetime="17:00">17:00</time></p>
-                <p class="price-card__price">
-                  <span class="price-card__price-value price-card__price-value--1">1700</span>
-                  <span class="price-card__price-value price-card__price-value--6">10200</span>
-                  <span class="price-card__price-value price-card__price-value--12">20400</span>
+                <p class="price-card__price price-card__price--1 price-card__price--current" data-price="1700">
+                  <span class="price-card__price-value">1700</span>
+                  <span class="visually-hidden">рублей</span>
+                </p>
+                <p class="price-card__price price-card__price--6" data-price="10200">
+                  <span class="price-card__price-value">10200</span>
+                  <span class="visually-hidden">рублей</span>
+                </p>
+                <p class="price-card__price price-card__price--12" data-price="20400">
+                  <span class="price-card__price-value">20400</span>
+                  <span class="visually-hidden">рублей</span>
                 </p>
                 <a class="price-card__button button" href="#">Купить абонемент</a>
               </article>
             </li>
-            <li class="price__card">
+            <li class="price__item">
               <article class="price__price-card price-card">
                 <h3 class="price-card__title">Полный день</h3>
                 <p class="price-card__description">С <time datetime="08:00">8:00</time> до <time datetime="22:00">22:00</time></p>
-                <p class="price-card__price">
-                  <span class="price-card__price-value price-card__price-value--1">2700</span>
-                  <span class="price-card__price-value price-card__price-value--6">16200</span>
-                  <span class="price-card__price-value price-card__price-value--12">32400</span>
+                <p class="price-card__price price-card__price--1 price-card__price--current" data-price="2700">
+                  <span class="price-card__price-value">2700</span>
+                  <span class="visually-hidden">рублей</span>
+                </p>
+                <p class="price-card__price price-card__price--6" data-price="16200">
+                  <span class="price-card__price-value">16200</span>
+                  <span class="visually-hidden">рублей</span>
+                </p>
+                <p class="price-card__price price-card__price--12" data-price="32400">
+                  <span class="price-card__price-value">32400</span>
+                  <span class="visually-hidden">рублей</span>
                 </p>
                 <a class="price-card__button button" href="#">Купить абонемент</a>
               </article>
@@ -467,25 +483,25 @@
             <li class="faq__topic">
               <label class="faq__tab">
                 <span class="faq__tab-text">Центр</span>
-                <input class="faq__tab-radio visually-hidden" type="radio" name="topic" value="center" checked>
+                <input class="faq__tab-radio visually-hidden" type="radio" name="topic" value="center" checked data-tab="faq__list">
               </label>
             </li>
             <li class="faq__topic">
               <label class="faq__tab">
                 <span class="faq__tab-text">Абонемент</span>
-                <input class="faq__tab-radio visually-hidden" type="radio" name="topic" value="membership">
+                <input class="faq__tab-radio visually-hidden" type="radio" name="topic" value="membership" data-tab="faq__list">
               </label>
             </li>
             <li class="faq__topic">
               <label class="faq__tab">
                 <span class="faq__tab-text">Услуги</span>
-                <input class="faq__tab-radio visually-hidden" type="radio" name="topic" value="services">
+                <input class="faq__tab-radio visually-hidden" type="radio" name="topic" value="services" data-tab="faq__list">
               </label>
             </li>
             <li class="faq__topic">
               <label class="faq__tab">
                 <span class="faq__tab-text">Правила</span>
-                <input class="faq__tab-radio visually-hidden" type="radio" name="topic" value="rules">
+                <input class="faq__tab-radio visually-hidden" type="radio" name="topic" value="rules" data-tab="faq__list">
               </label>
             </li>
           </ul>
