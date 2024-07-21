@@ -6,7 +6,7 @@ const tabs = document.querySelectorAll(`[${TAB_ATTRIBUTE}]`);
 const onTabChange = (evt) => {
   const tab = evt.target;
 
-  const relatedClass = tab.getAttribute('data-tab');
+  const relatedClass = tab.getAttribute(`${TAB_ATTRIBUTE}`);
   const visibleClass = `${relatedClass}--${DISPLAY_MODIFIER}`;
   const currentReletedClass = `${relatedClass}--${tab.value}`;
 
