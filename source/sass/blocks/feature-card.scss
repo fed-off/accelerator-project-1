@@ -1,0 +1,164 @@
+.feature-card {
+  display: flex;
+  flex-direction: column;
+
+  padding: 0 25px;
+  width: 290px;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    gap: 15px;
+    width: 324px;
+    padding: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 360px;
+    justify-content: space-between;
+  }
+}
+
+.feature-card p {
+  margin: 0;
+
+  @media (min-width: $tablet-width) {
+    text-align: start;
+  }
+}
+
+.feature-card b {
+  display: block;
+  margin: 0;
+  font-size: 64px;
+  font-weight: $bold-weight;
+  line-height: 100%;
+  background: linear-gradient(145deg, #d10a42 0%, #0041ca 50%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 1px;
+    font-size: 70px;
+  }
+}
+
+.feature-card span {
+  display: block;
+  margin: 0;
+  margin-bottom: 12px;
+  font-weight: $regular-weight;
+  line-height: 20px;
+  color: $desc;
+
+  @media (min-width: $tablet-width) {
+    font-size: 14px;
+    line-height: 22px;
+    text-align: start;
+    margin: 0;
+  }
+}
+
+.text-wrapper {
+  @media (min-width: $desktop-width) {
+    width: 210px;
+    margin-top: 1px;
+  }
+}
+
+.feature-card h3 {
+  margin: 0;
+  margin-bottom: 12px;
+  font-size: 18px;
+  font-weight: $regular-weight;
+  line-height: 20px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 100%;
+    text-align: start;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 22px;
+    margin-bottom: 8px;
+  }
+}
+
+
+.feature-card--accent {
+  width: 320px;
+  padding: 30px 75px 40px;
+  margin: 5px -15px;
+  color: $white;
+  background-color: $btn-border;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+    padding: 35px;
+    margin: -1px 100px 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 58px 40px;
+    margin: 0;
+    width: 360px;
+  }
+}
+
+.feature-card--accent h3 {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.feature-card--accent b {
+  margin-bottom: 7px;
+  background: initial;
+  background-clip: initial;
+  -webkit-text-fill-color: initial;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 25px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 10px;
+  }
+}
+
+.feature-card--accent span {
+  margin-bottom: 20px;
+  font-size: 22px;
+  font-weight: $bold-weight;
+  color: inherit;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 26px;
+    font-size: 24px;
+    line-height: 100%;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 30px;
+    font-size: 26px;
+  }
+}
+
+.feature-card--accent p {
+  text-align: center;
+}
+
+.feature-card--accent .text-wrapper {
+  width: 100%;
+}
