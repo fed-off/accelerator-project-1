@@ -12,7 +12,7 @@ new Swiper('.juri__slider', {
     768: {
       slidesPerView: 2,
     },
-    1024: {
+    1366: {
       slidesPerView: 4,
       simulateTouch: false,
     }
