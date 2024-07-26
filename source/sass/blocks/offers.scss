@@ -1,0 +1,66 @@
+.offers {
+  padding: 40px 0;
+
+  @media (min-width: $tablet-width) {
+    padding: 60px 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 100px 0;
+  }
+}
+
+.offers__title {
+  margin: 0;
+  margin-bottom: 40px;
+
+  font-family: $secondary-font;
+  font-size: 32px;
+  font-weight: $semi-bold-weight;
+  line-height: 100%;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 35px;
+    font-size: 42px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 70px;
+    font-size: 54px;
+  }
+}
+
+.offers__list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 30px;
+    row-gap: 35px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-rows: auto minmax(174px, auto);
+    align-items: end;
+    column-gap: 40px;
+    row-gap: 30px;
+  }
+}
+
+.offers__item:has(.offer-card--accent) {
+  @media (min-width: $tablet-width) {
+    grid-column: span 2;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column: span 1;
+    grid-row: span 2;
+  }
+}
