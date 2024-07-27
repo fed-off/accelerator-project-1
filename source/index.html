@@ -177,7 +177,7 @@
       </section>
 
       <section class="event" data-test="games">
-        <div class="event__container container">
+        <div class="container">
           <h2 class="visually-hidden">Мероприятия</h2>
           <article class="event__card event-card">
             <div class="event-card__title-wrapper">
@@ -205,7 +205,7 @@
       </section>
 
       <section class="juri" data-test="juri">
-        <div class="juri__container container">
+        <div class="container">
           <h2 class="juri__title">Жюри</h2>
           <div class="juri__slider swiper">
             <button class="juri__slider-button juri__slider-button--prev slider-button swiper-button-prev" type="button">
@@ -437,7 +437,7 @@
       </section>
 
       <section class="features" data-test="features">
-        <div class="features__container container">
+        <div class="container">
           <h2 class="features__title">Наши преимущества</h2>
           <ul class="features__list">
             <li class="features__item features__item--underline">
@@ -505,7 +505,7 @@
       </section>
 
       <section class="offers" data-test="offers">
-        <div class="offers__container container">
+        <div class="container">
           <h2 class="offers__title">Акции</h2>
           <ul class="offers__list">
             <li class="offers__item">
@@ -537,7 +537,7 @@
       </section>
 
       <section class="faq" data-test="faq">
-        <div class="faq__container container">
+        <div class="container">
           <h2 class="faq__title">Вопросы и ответы</h2>
           <div class="faq__content-wrapper">
             <ul class="faq__topics">
@@ -755,7 +755,7 @@
       </section>
 
       <section class="reviews" data-test="reviews">
-        <div class="reviews__container container">
+        <div class="container">
           <h2 class="reviews__title">Отзывы</h2>
           <div class="reviews__slider swiper">
             <button class="reviews__slider-button reviews__slider-button--prev slider-button swiper-button-prev" type="button">
@@ -798,49 +798,57 @@
         </div>
       </section>
 
-      <div class="contact" data-test="form">
-        <article class="contact__form form">
-          <div class="form__container container">
-            <form action="https://echo.htmlacademy.ru/" method="post">
-              <h2 class="form__title">Бесплатное занятие</h2>
-              <label class="form__label">
-                <span class="visually-hidden">Имя</span>
-                <input class="!form__input" type="text" name="name" placeholder="Имя" required>
-              </label>
-              <label class="form__label">
-                <span class="visually-hidden">Телефон</span>
-                <input class="!form__input" type="text" name="phone" placeholder="Телефон" required>
-              </label>
-              <button class="form__button button" type="submit">Отправить</button>
-            </form>
-          </div>
-        </article>
+      <div data-test="form">
+        <div class="container">
+          <div class="feedback">
+            <article class="feedback__form form">
+              <form action="https://echo.htmlacademy.ru/" method="post">
+                <h2 class="form__title">Бесплатное занятие</h2>
+                <div class="form__input-wrapper">
+                  <label class="form__label">
+                    <span class="visually-hidden">Имя</span>
+                    <input type="text" name="name" placeholder="Имя" autocomplete="off" pattern="[A-Za-zА-Яа-я ]*" required>
+                    <span class="form__error">Поддерживает буквы и пробелы</span>
+                  </label>
+                  <label class="form__label">
+                    <span class="visually-hidden">Телефон</span>
+                    <input type="text" name="phone" placeholder="Телефон" autocomplete="off" pattern="[^A-Za-zА-Яа-я]*" required>
+                    <span class="form__error">Не поддерживает буквы</span>
+                  </label>
+                </div>
+                <button class="form__button button button--light" type="submit">Отправить</button>
+              </form>
+            </article>
 
-        <article class="contact__contacts contacts">
-          <div class="contacts__container container">
-            <h2 class="contacts__title">Контакты</h2>
-            <address class="contacts__wrapper">
-              <ul class="contacts__list">
-                <li class="contacts__item">
-                  <p class="contacts__title">Адрес:</p>
-                  <p class="contacts__text">г. Омск, ул. 60 лет Октября, 7</p>
-                </li>
-                <li class="contacts__item">
-                  <p class="contacts__title">График работы:</p>
-                  <p class="contacts__text">Пн-Вс: с <time datetime="08:00">8:00</time> до <time datetime="22:00">22:00</time></p>
-                </li>
-                <li class="contacts__item">
-                  <p class="contacts__title">Телефон:</p>
-                  <p class="contacts__text"><a class="contacts__link" href="tel:+78005555555">8 800 555-55-55</a></p>
-                </li>
-                <li class="contacts__item">
-                  <p class="contacts__title">Email:</p>
-                  <p class="contacts__text"><a class="contacts__link" href="mailto:омск@supergym.ru">омск@supergym.ru</a></p>
-                </li>
-              </ul>
-            </address>
+            <article class="feedback__contacts contacts">
+              <h2 class="contacts__title">Контакты</h2>
+              <address class="contacts__wrapper">
+                <ul class="contacts__list">
+                  <li class="contacts__item">
+                    <p class="contacts__item-title">Адрес:</p>
+                    <p class="contacts__text">г. Омск, ул. 60 лет Октября, 7</p>
+                  </li>
+                  <li class="contacts__item">
+                    <p class="contacts__item-title">График работы:</p>
+                    <p class="contacts__text">Пн-Вс: с <time datetime="08:00">8:00</time> до <time datetime="22:00">22:00</time></p>
+                  </li>
+                  <li class="contacts__item">
+                    <p class="contacts__item-title">Телефон:</p>
+                    <p class="contacts__text">
+                      <a class="contacts__link" href="tel:+78005555555">8 800 555-55-55</a>
+                    </p>
+                  </li>
+                  <li class="contacts__item">
+                    <p class="contacts__item-title">Email:</p>
+                    <p class="contacts__text">
+                      <a class="contacts__link" href="mailto:омск@supergym.ru">омск@supergym.ru</a>
+                    </p>
+                  </li>
+                </ul>
+              </address>
+            </article>
           </div>
-        </article>
+        </div>
       </div>
     </main>
 
