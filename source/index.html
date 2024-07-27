@@ -757,42 +757,44 @@
       <section class="reviews" data-test="reviews">
         <div class="reviews__container container">
           <h2 class="reviews__title">Отзывы</h2>
-          <button class="reviews__slider-button slider-button slider-button--prev" type="button">
-            <span class="visually-hidden">Вперёд</span>
-          </button>
-          <ul class="reviews__list">
-            <li class="reviews__item">
-              <article class="reviews__review-card review-card">
-                <picture>
-                  <source type="image/webp" media="(min-width: 768px)" srcset="img/avatar-tablet@1x.webp, img/avatar-tablet@2x.webp 2x" width="80" height="80">
-                  <source type="image/webp" srcset="img/avatar-mobile@1x.webp, img/avatar-mobile@2x.webp 2x" width="68" height="68">
-                  <source type="image/jpg" media="(min-width: 768px)" srcset="img/avatar-tablet@1x.jpg, img/avatar-tablet@2x.jpg 2x" width="80" height="80">
-                  <img src="img/avatar-mobile@1x.jpg" srcset="img/avatar-mobile@2x.jpg 2x" width="68" height="68" alt="Аватар пользователя">
-                </picture>
-                <div class="review-card__content-wrapper">
-                  <h3>Анна Орлова</h3>
-                  <blockquote>"Хожу в Supergym уже больше года. Нравится, что в клубе всегда чисто, тренажёры обновляют, персонал дружелюбный. Зал просторный, даже в вечернее время нет очередей"</blockquote>
-                </div>
-              </article>
-            </li>
-            <li class="reviews__item">
-              <article class="reviews__review-card review-card">
-                <picture>
-                  <source type="image/webp" media="(min-width: 768px)" srcset="img/avatar-tablet@1x.webp, img/avatar-tablet@2x.webp 2x" width="80" height="80">
-                  <source type="image/webp" srcset="img/avatar-mobile@1x.webp, img/avatar-mobile@2x.webp 2x" width="68" height="68">
-                  <source type="image/jpg" media="(min-width: 768px)" srcset="img/avatar-tablet@1x.jpg, img/avatar-tablet@2x.jpg 2x" width="80" height="80">
-                  <img src="img/avatar-mobile@1x.jpg" srcset="img/avatar-mobile@2x.jpg 2x" width="68" height="68" alt="Аватар пользователя">
-                </picture>
-                <div class="review-card__content-wrapper">
-                  <h3>Кекс Академик</h3>
-                  <blockquote>"Хожу в Supergym уже год. В клубе всегда чисто, тренажёры обновляют, люди дружелюбные. Зал просторный, даже в вечернее время нет очередей"</blockquote>
-                </div>
-              </article>
-            </li>
-          </ul>
-          <button class="reviews__slider-button slider-button slider-button--next" type="button">
-            <span class="visually-hidden">Вперёд</span>
-          </button>
+          <div class="reviews__slider swiper">
+            <button class="reviews__slider-button reviews__slider-button--prev slider-button swiper-button-prev" type="button">
+              <span class="visually-hidden">Вперёд</span>
+            </button>
+            <ul class="reviews__list swiper-wrapper">
+              <li class="reviews__item swiper-slide">
+                <article class="reviews__review-card review-card">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/avatar-tablet@1x.webp, img/avatar-tablet@2x.webp 2x" width="80" height="80">
+                    <source type="image/webp" srcset="img/avatar-mobile@1x.webp, img/avatar-mobile@2x.webp 2x" width="68" height="68">
+                    <source type="image/png" media="(min-width: 768px)" srcset="img/avatar-tablet@1x.png, img/avatar-tablet@2x.png 2x" width="80" height="80">
+                    <img src="img/avatar-mobile@1x.png" srcset="img/avatar-mobile@2x.png 2x" width="68" height="68" alt="Аватар пользователя">
+                  </picture>
+                  <div class="review-card__content-wrapper">
+                    <h3>Анна Орлова</h3>
+                    <blockquote>Хожу в Supergym уже больше года. Нравится, что в клубе всегда чисто, тренажёры обновляют, персонал дружелюбный. Зал просторный, даже в вечернее время нет очередей</blockquote>
+                  </div>
+                </article>
+              </li>
+              <li class="reviews__item swiper-slide">
+                <article class="reviews__review-card review-card">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/avatar-tablet@1x.webp, img/avatar-tablet@2x.webp 2x" width="80" height="80">
+                    <source type="image/webp" srcset="img/avatar-mobile@1x.webp, img/avatar-mobile@2x.webp 2x" width="68" height="68">
+                    <source type="image/png" media="(min-width: 768px)" srcset="img/avatar-tablet@1x.png, img/avatar-tablet@2x.png 2x" width="80" height="80">
+                    <img src="img/avatar-mobile@1x.png" srcset="img/avatar-mobile@2x.png 2x" width="68" height="68" alt="Аватар пользователя">
+                  </picture>
+                  <div class="review-card__content-wrapper">
+                    <h3>Кекс Академик</h3>
+                    <blockquote>Хожу в Supergym уже год. В клубе всегда чисто, тренажёры обновляют, люди дружелюбные. Зал просторный, даже в вечернее время нет очередей</blockquote>
+                  </div>
+                </article>
+              </li>
+            </ul>
+            <button class="reviews__slider-button reviews__slider-button--next slider-button slider-button--next swiper-button-next" type="button">
+              <span class="visually-hidden">Вперёд</span>
+            </button>
+          </div>
         </div>
       </section>
 
