@@ -1,0 +1,193 @@
+.form {
+  padding: 70px 15px;
+  margin: 0 -15px;
+  color: $white;
+  background-color: $primary-color;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 -45px;
+    padding: 60px 164px 59px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 683px;
+    margin: 0;
+    padding: 60px 103px;
+  }
+}
+
+.form__title {
+  margin: 1px 0;
+  margin-bottom: 35px;
+
+  font-family: $secondary-font;
+  font-size: 32px;
+  font-weight: $semi-bold-weight;
+  line-height: 100%;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 0;
+    margin-bottom: 36px;
+    font-size: 54px;
+    text-align: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    text-align: start;
+  }
+}
+
+.form__input-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  margin-bottom: 36px;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 36px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 35px;
+  }
+}
+
+.form input {
+  display: block;
+  width: 100%;
+  height: 27px;
+  padding: 0 1px;
+  padding-bottom: 5px;
+  border: 0;
+  background-color: transparent;
+
+  font-size: 14px;
+  line-height: 22px;
+  color: $white;
+
+  &::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 205px;
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 223px;
+  }
+
+
+  &:disabled {
+    color: rgba(255, 255, 255, 0.4);
+  }
+
+  &:focus {
+    outline: none;
+
+    &::placeholder {
+      color: transparent;
+    }
+  }
+}
+
+.form__error {
+  display: none;
+  position: absolute;
+  top: calc(100% + 2px);
+  left: 0;
+  color: #ff121f;
+  width: 100%;
+  height: 22px;
+  overflow: overlay;
+
+  font-size: 14px;
+  font-weight: $regular-weight;
+  line-height: 22px;
+}
+
+.form__label {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: $divider;
+  }
+
+
+  &:has(input:disabled) {
+    &::before {
+      background-color: rgba(255, 255, 255, 0.3);
+    }
+  }
+
+  &:has(input:focus) {
+    &::before {
+      display: none;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: -7px;
+      left: -4px;
+
+      width: calc(100% + 8px);
+      height: 36px;
+      border: 1px solid $white;
+      pointer-events: none;
+    }
+  }
+
+  &:has(input:focus):hover,
+  &:hover {
+    &::before {
+      display: block;
+      background-color: $white;
+    }
+  }
+
+  &:has(input:user-invalid),
+  &:has(input:focus):has(input:user-invalid) {
+    &::before {
+      display: block;
+      background-color: #ff121f;
+    }
+  }
+
+  &:has(input:user-invalid) {
+    .form__error {
+      display: block;
+    }
+  }
+}
+
+.form__button {
+  display: block;
+  width: 100%;
+
+  @media (min-width: $tablet-width) {
+    min-height: 66px;
+  }
+
+  @media (min-width: $desktop-width) {
+    &::before {
+      filter: blur(0.04em);
+    }
+  }
+
+  &:not(:disabled):focus-visible {
+    &::before {
+      filter: initial;
+    }
+  }
+}

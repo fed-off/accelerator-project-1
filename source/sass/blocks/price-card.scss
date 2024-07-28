@@ -1,0 +1,151 @@
+.price-card {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 18px;
+  width: 290px;
+  min-height: 384px;
+  padding: 51px 42px 50px;
+  background-color: $white;
+
+  @media (min-width: $tablet-width) {
+    gap: 22px;
+    width: 380px;
+    min-height: 460px;
+    padding: 65px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-height: 447px;
+    gap: 17px;
+    width: 360px;
+  }
+
+  &:focus-within,
+  &:hover {
+    background: linear-gradient(135deg, #d10a42, #00359f);
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: -1;
+      margin: 7px;
+      background: $white;
+    }
+  }
+}
+
+.price-card__title {
+  margin: 0;
+
+  font-size: 22px;
+  font-weight: $bold-weight;
+  line-height: 22px;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    font-size: 24px;
+    line-height: 24px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 26px;
+    line-height: 26px;
+  }
+}
+
+.price-card__description {
+  margin: 0;
+
+  text-align: center;
+  text-transform: lowercase;
+}
+
+.price-card__price {
+  position: relative;
+  display: none;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 10px;
+  min-height: 119px;
+  margin: 0;
+  color: $price;
+
+  font-size: 48px;
+  font-weight: $bold-weight;
+  line-height: 72px;
+  text-align: center;
+
+  &::before {
+    content: attr(data-price);
+    position: absolute;
+    top: 49%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.48;
+
+    font-size: 80px;
+    font-weight: $bold-weight;
+    line-height: 120px;
+    text-align: center;
+    color: $price-shadow;
+  }
+
+  &--current {
+    display: flex;
+  }
+
+  @media (min-width: $tablet-width) {
+    min-height: 150px;
+    font-size: 60px;
+    line-height: 90px;
+
+    &::before {
+      font-size: 100px;
+      line-height: 150px;
+    }
+  }
+}
+
+.price-card__price-value {
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  min-height: 75px;
+
+  &::after {
+    content: "";
+    position: relative;
+    top: 1px;
+    flex-shrink: 0;
+    width: 24px;
+    height: 34px;
+    mask-image: url("../__spritemap#sprite-rub-view");
+    background-color: $primary-color;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: contain;
+  }
+
+  @media (min-width: $tablet-width) {
+    gap: 15px;
+
+    &::after {
+      top: 0;
+      width: 30px;
+      height: 42px;
+    }
+  }
+}
+
+.price-card__button {
+  min-height: 66px;
+}

@@ -1,0 +1,202 @@
+.price {
+  padding: 41px 0 40px;
+  background-color: $primary-bg;
+
+  @media (min-width: $tablet-width) {
+    position: relative;
+    padding: 61px 0;
+    overflow: hidden;
+
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0.78%;
+      left: 66%;
+      transform: rotate(-30deg);
+      width: 275px;
+      height: 328px;
+      background: image-set(url("../../img/weight-tablet@1x.webp") type("image/webp") 1x, url("../../img/weight-tablet@2x.webp") type("image/webp") 2x, url("../../img/weight-tablet@1x.jpg") type("image/jpg") 1x, url("../../img/weight-tablet@2x.jpg") type("image/jpg") 2x);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 100px 0 101px;
+
+    &::before {
+      left: 83.2%;
+      bottom: 1%;
+      transform: rotate(-30deg);
+      width: 321px;
+      height: 384px;
+      background: image-set(url("../../img/weight-desktop@1x.webp") type("image/webp") 1x, url("../../img/weight-desktop@2x.webp") type("image/webp") 2x, url("../../img/weight-desktop@1x.jpg") type("image/jpg") 1x, url("../../img/weight-desktop@2x.jpg") type("image/jpg") 2x);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+}
+
+.price__title {
+  margin: 0 auto;
+  margin-bottom: 31px;
+
+  font-family: $secondary-font;
+  font-size: 32px;
+  font-weight: $semi-bold-weight;
+  line-height: 32px;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    width: 310px;
+    margin-bottom: 36px;
+
+    font-size: 42px;
+    line-height: 42px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 350px;
+    margin-bottom: 20px;
+
+    font-size: 54px;
+    line-height: 54px;
+  }
+}
+
+// Блок с таким выравниванием очень плохо переживает переполнение с переносом на новую строку. Лечится гридами, но для этого необходимо обсудить выравнивание с дизайнером, есть несколько предложений.
+.price__variants {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 10px;
+  margin: 0;
+  margin-bottom: 30px;
+  padding: 0;
+  list-style: none;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 2px;
+    background-color: rgba(120, 120, 120, 0.2);
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 310px;
+    margin: 0 auto;
+    margin-bottom: 45px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 350px;
+    margin-bottom: 40px;
+  }
+}
+
+.price__tab {
+  position: relative;
+  display: block;
+  width: fit-content;
+  min-height: 24px;
+  height: 100%;
+  padding-bottom: 8px;
+  user-select: none;
+  cursor: pointer;
+
+  font-size: 16px;
+  font-weight: $regular-weight;
+  line-height: 16px;
+  color: $light;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 18px;
+    line-height: 18px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-height: 30px;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+
+  &:has(input:disabled) {
+    color: $primary-color;
+    opacity: 0.3;
+    cursor: default;
+
+    &::before {
+      background-color: $primary-color;
+    }
+  }
+
+  &:not(:has(.price__tab-radio:disabled)):has(.price__tab-radio:checked):not(:hover) {
+    color: $primary-color;
+
+    &::before {
+      background-color: #d10a42;
+    }
+  }
+
+  &:not(:has(.price__tab-radio:disabled)):has(.price__tab-radio:checked):has(.price__tab-radio:focus-visible) {
+    outline: auto;
+    outline-offset: 5px;
+    color: $primary-color;
+
+    &::before {
+      background-color: $primary-color;
+    }
+  }
+
+  &:not(:has(.price__tab-radio:disabled)):has(.price__tab-radio:checked):has(.price__tab-radio:focus-visible):hover,
+  &:not(:has(.price__tab-radio:disabled)):hover {
+    color: rgba(16, 38, 84, 0.7);
+
+    &::before {
+      background-color: #787878;
+    }
+  }
+
+  &:not(:has(.price__tab-radio:disabled)):active {
+    color: $primary-color;
+
+    &::before {
+      background-color: $accent-bg;
+    }
+  }
+}
+
+
+.price__list {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 35px;
+
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @media (min-width: $tablet-width) {
+    gap: 40px;
+  }
+}

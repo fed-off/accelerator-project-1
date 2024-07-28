@@ -1,0 +1,25 @@
+.footer {
+  position: relative;
+  padding: 40px 0;
+  background-color: $dark;
+
+  @media (min-width: $tablet-width) {
+    padding: 45px 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 40px 0;
+  }
+}
+
+.footer__wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}

@@ -1,0 +1,195 @@
+.faq {
+  padding: 70px 0;
+  background-color: $primary-bg;
+
+  @media (min-width: $tablet-width) {
+    padding: 60px 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 100px 0;
+  }
+}
+
+.faq__title {
+  margin: 0;
+
+  font-family: $secondary-font;
+  font-size: 32px;
+  font-weight: $semi-bold-weight;
+  line-height: 100%;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    font-size: 42px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 50px;
+    font-size: 54px;
+    text-align: start;
+  }
+}
+
+
+.faq__topics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 0;
+  padding: 35px 0;
+  list-style: none;
+
+  @media (min-width: $tablet-width) {
+    padding: 45px 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-direction: column;
+    padding: 0;
+  }
+}
+
+.faq__content-wrapper {
+  @media (min-width: $desktop-width) {
+    display: flex;
+    gap: 40px;
+  }
+}
+
+.faq__tab {
+  position: relative;
+  display: block;
+  width: 140px;
+  padding: 15px;
+
+  font-size: 16px;
+  font-weight: $regular-weight;
+  line-height: 100%;
+  text-align: center;
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    border: 1px solid $tab-border;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 162px;
+    padding: 18px;
+    font-size: 18px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 260px;
+    padding: 19px 18px 17px;
+    font-size: 18px;
+  }
+
+
+  &:has(input:checked):not(:hover) {
+    color: $white;
+    background: linear-gradient(115deg, #ed0233 0%, #003eb7 100%);
+
+    &::before {
+      border: 0;
+    }
+  }
+
+  &:has(input:disabled) {
+    color: #c8c9cc;
+    cursor: default;
+  }
+
+  &:not(:has(input:disabled)):has(input:focus-visible) {
+    outline: auto;
+    outline-offset: 5px;
+    color: $primary-color;
+    background: $white;
+
+    &::before {
+      border: 1px solid $primary-color;
+    }
+  }
+
+  &:not(:has(input:disabled)):has(input:focus-visible):hover,
+  &:not(:has(input:disabled)):hover {
+    background: transparent;
+
+    &::before {
+      border: 1px solid $primary-color;
+    }
+  }
+
+  &:not(:has(input:disabled)):active {
+    color: $white;
+    background: linear-gradient(151deg, #ed0233 0%, #003eb7 100%);
+
+    &::before {
+      border: 0;
+    }
+  }
+}
+
+.faq__list {
+  position: relative;
+  display: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: $divider;
+  }
+
+  &--current {
+    display: block;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 100%;
+
+    &::before {
+      top: -1px;
+    }
+  }
+}
+
+.faq__item {
+  position: relative;
+  padding: 21px 0 20px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 100%;
+    height: 1px;
+    background-color: $divider;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 24px 0 23px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 23px 0;
+
+    &::after {
+      bottom: 0;
+    }
+  }
+}

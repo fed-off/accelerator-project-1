@@ -1,0 +1,171 @@
+.accordion__title-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.accordion__title-wrapper h3 {
+  margin: 0;
+  width: 238px;
+
+  font-size: 20px;
+  font-weight: $regular-weight;
+  line-height: 100%;
+
+  @media (min-width: $tablet-width) {
+    width: 560px;
+    font-size: 22px;
+
+    .accordion__br-mobile {
+      display: none;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 24px;
+    width: 660px;
+
+    br {
+      display: none;
+    }
+  }
+}
+
+.accordion__button {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  background: transparent;
+  border-radius: 50%;
+  border: 1px solid $btn-border;
+  cursor: pointer;
+  outline-offset: 5px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 14px;
+    height: 1px;
+    background-color: $btn-border;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1px;
+    height: 14px;
+    background-color: $btn-border;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 40px;
+    height: 40px;
+
+    &::before {
+      width: 20px;
+    }
+
+    &::after {
+      height: 20px;
+    }
+  }
+
+  &:disabled {
+    opacity: 0.3;
+    cursor: default;
+  }
+
+  &:not(:disabled):focus-visible {
+    background: $divider;
+
+    &::before {
+      background-color: $white;
+    }
+
+    &::after {
+      background-color: $white;
+    }
+  }
+
+  &:not(:disabled):hover {
+    background: $btn-border;
+
+    &::before {
+      background-color: $white;
+    }
+
+    &::after {
+      background-color: $white;
+    }
+  }
+
+  &:not(:disabled):active {
+    opacity: 0.8;
+  }
+}
+
+.accordion__button--checked {
+  background-color: $btn-border;
+
+  &::before {
+    background-color: $white;
+  }
+
+  &::after {
+    background-color: $white;
+    display: none;
+  }
+
+  &:hover {
+    opacity: 0.9;
+  }
+}
+
+.accordion p {
+  width: 238px;
+  max-height: 0;
+  margin: 0;
+  overflow: hidden;
+  transition: all 0.5s ease;
+
+  font-size: 16px;
+  line-height: 20px;
+
+  @media (min-width: $tablet-width) {
+    width: 560px;
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 660px;
+  }
+}
+
+.accordion--full p {
+  max-height: 500px;
+  padding-top: 20px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 10px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 23px;
+  }
+}
+
+.accordion__br-desktop {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: block;
+  }
+}
