@@ -93,7 +93,7 @@
   }
 
 
-  &:has(input:checked) {
+  &:has(input:checked):not(:hover) {
     color: $white;
     background: linear-gradient(115deg, #ed0233 0%, #003eb7 100%);
 
@@ -107,7 +107,9 @@
     cursor: default;
   }
 
-  &:not(:disabled):has(input:focus-visible) {
+  &:not(:has(input:disabled)):has(input:focus-visible) {
+    outline: auto;
+    outline-offset: 5px;
     color: $primary-color;
     background: $white;
 
@@ -116,7 +118,10 @@
     }
   }
 
+  &:not(:has(input:disabled)):has(input:focus-visible):hover,
   &:not(:has(input:disabled)):hover {
+    background: transparent;
+
     &::before {
       border: 1px solid $primary-color;
     }

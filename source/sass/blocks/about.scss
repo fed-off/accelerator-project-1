@@ -229,6 +229,7 @@
   border-radius: 50%;
   border: 2px solid rgba(237, 2, 51, 0.2);
   cursor: pointer;
+  outline-offset: 5px;
 
   &::before {
     content: "";

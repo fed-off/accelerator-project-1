@@ -97,6 +97,7 @@
 .contacts__link {
   color: inherit;
   text-decoration: none;
+  outline-offset: 5px;
 
   &:focus-visible,
   &:hover {

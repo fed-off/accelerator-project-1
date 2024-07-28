@@ -19,7 +19,7 @@
       <article class="hero" data-test="hero">
         <div class="container">
           <header class="hero__header">
-            <div class="hero__logo logo">
+            <div class="logo">
               <picture>
                 <source media="(min-width: 1366px)" srcset="img/logo.svg" width="130" height="26" type="image/svg+xml">
                 <source media="(min-width: 768px)" srcset="img/logo.svg" width="110" height="22" type="image/svg+xml">
@@ -853,44 +853,46 @@
     </main>
 
     <footer class="footer" data-test="footer">
-      <div class="footer__container container">
-        <div class="footer__logo logo">
-          <picture>
-            <source media="(min-width: 1366px)" srcset="img/logo.svg" width="130" height="26" type="image/svg+xml">
-            <source media="(min-width: 768px)" srcset="img/logo.svg" width="110" height="22" type="image/svg+xml">
-            <img src="img/logo.svg" width="100" height="20" alt="Supergym">
-          </picture>
-        </div>
-        <nav class="footer__nav nav">
-          <ul class="nav__list">
-            <li class="nav__item">
-              <a class="nav__link" href="#">Услуги</a>
+      <div class="container">
+        <div class="footer__wrapper">
+          <div class="logo">
+            <picture>
+              <source media="(min-width: 1366px)" srcset="img/logo.svg" width="130" height="26" type="image/svg+xml">
+              <source media="(min-width: 768px)" srcset="img/logo.svg" width="110" height="22" type="image/svg+xml">
+              <img src="img/logo.svg" width="100" height="20" alt="Supergym">
+            </picture>
+          </div>
+          <nav class="footer__nav nav">
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a class="nav__link" href="#">Услуги</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="#">Абонементы</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="#">Акции</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="#">Тренеры</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="#">Расписание</a>
+              </li>
+            </ul>
+          </nav>
+          <ul class="footer__socials socials">
+            <li class="socials__item">
+              <a class="socials__link socials__link--vk" href="#">Вконтакте</a>
             </li>
-            <li class="nav__item">
-              <a class="nav__link" href="#">Абонементы</a>
+            <li class="socials__item">
+              <a class="socials__link socials__link--ok" href="#">Одноклассники</a>
             </li>
-            <li class="nav__item">
-              <a class="nav__link" href="#">Акции</a>
-            </li>
-            <li class="nav__item">
-              <a class="nav__link" href="#">Тренеры</a>
-            </li>
-            <li class="nav__item">
-              <a class="nav__link" href="#">Расписание</a>
+            <li class="socials__item">
+              <a class="socials__link socials__link--reddit" href="#">Реддит</a>
             </li>
           </ul>
-        </nav>
-        <ul class="footer__socials socials">
-          <li class="socials__item">
-            <a class="socials__link socials__link--vk" href="#">Вконтакте</a>
-          </li>
-          <li class="socials__item">
-            <a class="socials__link socials__link--ok" href="#">Одноклассники</a>
-          </li>
-          <li class="socials__item">
-            <a class="socials__link socials__link--reddit" href="#">Реддит</a>
-          </li>
-        </ul>
+        </div>
       </div>
     </footer>
 

@@ -148,7 +148,7 @@
     }
   }
 
-  &:has(.price__tab-radio:checked):not(:hover) {
+  &:not(:has(.price__tab-radio:disabled)):has(.price__tab-radio:checked):not(:hover) {
     color: $primary-color;
 
     &::before {
@@ -156,7 +156,9 @@
     }
   }
 
-  &:focus-visible {
+  &:not(:has(.price__tab-radio:disabled)):has(.price__tab-radio:checked):has(.price__tab-radio:focus-visible) {
+    outline: auto;
+    outline-offset: 5px;
     color: $primary-color;
 
     &::before {
@@ -164,7 +166,8 @@
     }
   }
 
-  &:hover {
+  &:not(:has(.price__tab-radio:disabled)):has(.price__tab-radio:checked):has(.price__tab-radio:focus-visible):hover,
+  &:not(:has(.price__tab-radio:disabled)):hover {
     color: rgba(16, 38, 84, 0.7);
 
     &::before {
@@ -172,7 +175,7 @@
     }
   }
 
-  &:active {
+  &:not(:has(.price__tab-radio:disabled)):active {
     color: $primary-color;
 
     &::before {

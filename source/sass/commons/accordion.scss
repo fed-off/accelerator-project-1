@@ -40,6 +40,7 @@
   border-radius: 50%;
   border: 1px solid $btn-border;
   cursor: pointer;
+  outline-offset: 5px;
 
   &::before {
     content: "";
