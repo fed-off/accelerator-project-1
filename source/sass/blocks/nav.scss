@@ -73,12 +73,6 @@
     cursor: default;
   }
 
-  &--disabled {
-    opacity: 0.4;
-    cursor: default;
-  }
-
-
   &:focus-visible {
     &::before {
       border: 1px solid $white;
