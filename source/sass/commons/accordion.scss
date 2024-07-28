@@ -122,6 +122,10 @@
     background-color: $white;
     display: none;
   }
+
+  &:hover {
+    opacity: 0.9;
+  }
 }
 
 .accordion p {

@@ -6,16 +6,19 @@
   justify-content: center;
   gap: 18px;
   width: 290px;
+  min-height: 384px;
   padding: 51px 42px 50px;
   background-color: $white;
 
   @media (min-width: $tablet-width) {
     gap: 22px;
     width: 380px;
+    min-height: 460px;
     padding: 65px;
   }
 
   @media (min-width: $desktop-width) {
+    min-height: 447px;
     gap: 17px;
     width: 360px;
   }
